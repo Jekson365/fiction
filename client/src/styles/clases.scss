@@ -1,3 +1,5 @@
+@import './vars.scss';
+
 .f-bold {
     font-weight: bold;
 }
@@ -12,4 +14,20 @@
 
 .size-22 {
     font-size: 22px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.button-primary {
+    background-color: $color-text;
+    border: 1px solid $color-text;
+}
+
+.f-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
 }

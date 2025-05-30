@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Models;
+using server.Models;
 
 namespace Db
 {
@@ -7,5 +8,6 @@ namespace Db
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<Test> Tests { get; set; }
+        public DbSet<Post> Posts{ get; set; }
     }
 }

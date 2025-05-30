@@ -17,10 +17,80 @@ body {
     align-items: center;
     gap: 50px;
 
+    .upload-post-container {
+        padding: 20px;
+        background-color: $color-primary;
+
+        img {
+            width: 800px;
+        }
+
+        .image-place {
+            overflow: hidden;
+
+            .upload-image {
+                // width: 100%;
+                height: 200px;
+                opacity: 0.3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.3s;
+                border: 5px dashed white;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .add-icon {
+                    color: white;
+                    font-size: 30px;
+                    border: 3px solid white;
+                    width: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50px;
+                }
+            }
+        }
+
+        .inp {
+            textarea {
+                margin-top: 20px;
+                font-size: 20px;
+                outline: 0;
+                border: 0;
+                background-color: transparent;
+                color: white;
+            }
+
+            .title-input {
+                color: white;
+                margin-top: 20px;
+                font-weight: bold;
+                font-size: 20px;
+                width: 100%;
+                border: 0;
+                outline: 0;
+                background-color: transparent;
+            }
+        }
+
+        .files {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
     .post {
         padding: 10px;
         border-radius: 10px;
-        width: 800px;
+        max-width: 800px;
         background-color: $color-primary;
         height: fit-content;
 
@@ -30,6 +100,7 @@ body {
             height: 500px;
 
             img {
+                aspect-ratio: 3/1;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -70,7 +141,7 @@ body {
 }
 
 .sizes {
-    position:fixed;
+    position: fixed;
     // width: 40px;
     left: 20px;
     gap: 10px;
@@ -93,5 +164,79 @@ body {
             background-color: $color-hover-text;
             border: 2px solid $color-hover-bg;
         }
+    }
+}
+
+.create-container {
+    margin: 0 auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+
+        textarea {
+            padding: 10px 10px;
+            border: 0;
+            background-color: $color-primary;
+            outline: 0;
+            color: white;
+            width: 680px;
+            flex: 0 0 85%;
+        }
+
+        .button-primary {
+            background-color: transparent;
+            color: $color-text;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $color-text;
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+
+.button-icon {
+    background-color: $color-bg;
+    color: $color-text;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $color-text;
+        color: $color-bg;
+    }
+}
+
+.error-text {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background-color: #CB0404;
+    min-width: 200px;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+        font-size: 15px;
     }
 }
